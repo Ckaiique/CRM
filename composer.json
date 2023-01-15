@@ -1,0 +1,14 @@
+{
+    "name": "project/crm",
+    "autoload": {
+        "psr-4": {
+            "Project\\Crm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kaique Corrreia"
+        }
+    ],
+    "require": {}
+}
