@@ -5,18 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script src="../JavaScript/main_modules.js"></script> 
     <link rel="stylesheet" href="./Css/main_module.css">
     <title id="title"></title>
 </head>
 
-<body>
+<body style="background-color: #ddd9d9;">
  
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)"  class="closebtn" onclick="closeNav()">&times;</a>
@@ -27,46 +28,13 @@
   </div>
   
   <div id="main">
-    <span id="open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="container-fluid p-3  bg-dark text-white rounded"> 
+      <span id="open"  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; CRM</span>
+    </div>
     <div id="element">
     </div>
   </div>
         
 </body>
-<script>
-
-Links('Home');
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById('open').style.display = "none";
- 
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById('open').style.display =  'inline';
- 
-}
-
-
-function Links(link){
-  document.getElementById('title').innerHTML = link;
-
-  var url = 'Route/'+link+'_modules.html';
-  var xml = new XMLHttpRequest();
-  
-  xml.onreadystatechange = function(){
-    console.log(link)
-    if(xml.readyState == 4 && xml.status == 200){
-      document.getElementById('element').innerHTML = xml.responseText;
-
-    }
-  }
-  xml.open("GET",url,true);
-  xml.send()
-}
-</script>
+<script>Links('Home');</script>
 </html>
