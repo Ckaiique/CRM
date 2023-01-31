@@ -24,7 +24,7 @@ function Links(link){
   var xml = new XMLHttpRequest();
   
   xml.onreadystatechange = function(){
-    console.log(link)
+   
     if(xml.readyState == 4 && xml.status == 200){
       document.getElementById('element').innerHTML = xml.responseText;
 

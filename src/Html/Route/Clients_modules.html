@@ -27,56 +27,78 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body row">
+                <div id="modalCadastro" class="modal-body row">
 
                     <div class="form-group col-sm-6">
-                        <label for="email">Cliente</label>
-                        <input type="email" class="form-control" id="email" placeholder="" name="email">
+                        <label for="Cliente">Cliente</label>
+                        <input type="text" class="form-control" id="Cliente" placeholder="" name="Cliente">
                     </div>
                     
                     <div class="form-group col-sm-6">
-                        <label for="pwd">CNPJ</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
+                        <label for="Empresa">Empresa</label>
+                        <input type="text" class="form-control" id="Empresa" placeholder="" name="Empresa">
+                    </div>
+                    
+                    <div class="form-group col-sm-6">
+                        <label for="Categoria">Categoria</label>
+                        <input type="text" class="form-control" id="Categoria" placeholder="" name="Categoria">
+                    </div>
+                 
+                    <div class="form-group col-sm-6">
+                        <label for="Situacao">Situação</label>
+                        <input type="text" class="form-control" id="Situacao" placeholder="" name="Situacao">
                     </div>
               
                     <div class="form-group col-sm-6">
-                        <label for="pwd">Contato</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
+                        <label for="Contato">Contato</label>
+                        <input type="text" class="form-control" id="Contato" placeholder="" name="Contato">
                     </div>
               
                     <div class="form-group col-sm-6">
-                        <label for="pwd">Rua</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
+                        <label for="Whats">Whats</label>
+                        <input type="text" class="form-control" id="Whats" placeholder="" name="Whats">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="CEP">CEP</label>
+                        <input type="text" class="form-control" id="CEP" placeholder="" name="CEP" onblur="consultaCep()" >
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="Endereco">Endereço</label>
+                        <input type="text" class="form-control" id="Endereco" placeholder="" name="Endereco">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="Bairro">Bairro</label>
+                        <input type="text" class="form-control" id="Bairro" placeholder="" name="Bairro">
+                    </div>
+                    
+                    <div class="form-group col-sm-6">
+                        <label for="Cidade">Cidade</label>
+                        <input type="text" class="form-control" id="Cidade" placeholder="" name="Cidade">
                     </div>
               
                     <div class="form-group col-sm-6">
-                        <label for="pwd">Bairro</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
+                        <label for="Estado">Estado</label>
+                        <input type="text" class="form-control" id="Estado" placeholder="" name="Estado">
                     </div>
               
                     <div class="form-group col-sm-6">
-                        <label for="pwd">Cidade</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
-                    </div>
-              
-                    <div class="form-group col-sm-6">
-                        <label for="pwd">Estado</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
-                    </div>
-              
-                    <div class="form-group col-sm-6">
-                        <label for="pwd">Outros</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="" name="pswd">
+                        <label for="Obs">Obs</label>
+                        <input type="text" class="form-control" id="Obs" placeholder="" name="Obs">
                     </div>
               
                 </div>
                
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <a href="javascript:void(0)" id="save_cadastro_cliente" class="btn btn-primary">Salvar</a>
+                    <a href="javascript:void(0)" id="save_cadastro_cliente" onclick="saveCadastro()"  class="btn btn-primary">Salvar</a>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                  
                 </div>
             </div>
 
         </div>
+
+
+   
